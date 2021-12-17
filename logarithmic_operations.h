@@ -5,7 +5,7 @@ std::string ln(std::string expression)//natural logarithm
 	return std::to_string(log(stod(expression)));
 }
 
-std::string lg(std::string expression)//decimal logarithm
+std::string log(std::string expression)//decimal logarithm
 {
 	return std::to_string(log10(stod(expression)));
 }
