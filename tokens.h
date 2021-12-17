@@ -53,7 +53,7 @@ void tokenize(std::string& exapmle)
 			i = position;
 		}
 
-		if (exapmle[i] == 'ñ' && exapmle[i + 1] == 'o' && exapmle[i + 2] == 's' && exapmle[i + 3] == '(')//cosine
+		if (exapmle[i] == 'Ã±' && exapmle[i + 1] == 'o' && exapmle[i + 2] == 's' && exapmle[i + 3] == '(')//cosine
 		{	
 			int symbols = 0;
 			int position = i;
@@ -215,14 +215,14 @@ void tokenize(std::string& exapmle)
 			std::string new_string = exapmle.substr(begining_of_new_string, length_of_new_string);
 			exapmle.erase(position, (i - position + 1));
 		
-			if (stod(lg(new_string)) < 0.0000000001) 
+			if (stod(log(new_string)) < 0.0000000001) 
 			{
 				exapmle.insert(position, ")");
-				exapmle.insert(position, lg(new_string));
+				exapmle.insert(position, log(new_string));
 				exapmle.insert(position, "(");
 			}
 			else
-				exapmle.insert(position, lg(new_string));
+				exapmle.insert(position, log(new_string));
 			
 			i = position;
 		}
